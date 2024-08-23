@@ -1,0 +1,78 @@
+<div class="new-company-container">
+    <form id="companyForm">
+        <input type="hidden" id="companyId" name="_id"> <!-- Hidden input to store company ID -->
+
+        <div class="tab">
+            <div class="side">
+                <i class="fa-regular fa-image"></i>
+            </div>
+            <div class="inputs">
+                <div id="uploadImage">
+                    <img id="imagePreview" src="/images/profilePic.png" alt="">
+                    <button type="button" class="profilePictureBtn">
+                        <i class="fas fa-camera"></i>
+                    </button>
+
+                </div>
+
+                <div class="imageCropper">
+                    <img id="imageCropper">
+                </div>
+
+                <input type="file" name="companyLogo" id="imageInput">
+
+                <div class="imageCropperButtons">
+
+                    <button class="uploadImage" id="confirmImage">Upload</i></button>
+                    <button class="resetImage" id="cancelImage">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="tab">
+            <div class="side"><i class="fa-regular fa-building"></i></div>
+            <div class="inputs">
+                <select id="companyTypes" name="companyType">
+                    <option value="" selected disabled>Company type</option>
+                </select> <!-- bank, customer, supplier, ... -->
+                <input type="text" name="name_EN" placeholder="Company name (EN)">
+                <input type="text" name="abbreviation" placeholder="Abbreviation">
+            </div>
+        </div>
+        <hr>
+        <div class="tab">
+            <div class="side">
+                <i class="fa-regular fa-registered"></i>
+            </div>
+            <div class="inputs">
+                <input type="text" name="regNo" placeholder="Registration No.">
+                <input type="text" name="idNo" placeholder="ID No.">
+                <input type="text" name="commercialCode" placeholder="Commercial Code">
+                <input type="text" name="CEO_EN" id="" placeholder="CEO Name">
+            </div>
+        </div>
+        <hr>
+        <div class="tab">
+            <div class="side">
+                <i class="fa-regular fa-address-book"></i>
+            </div>
+            <div class="inputs">
+                <input type="text" name="phone" placeholder="Phone">
+                <input type="text" name="Email" placeholder="Email">
+                <input type="text" name="website" placeholder="Website">
+                <hr>
+                <input type="text" name="postalCode" placeholder="Postal code">
+                <textarea name="address_EN" placeholder="Address"></textarea>
+            </div>
+        </div>
+
+    </form>
+    <div class="errors" id="submitCompanyErrors">
+
+    </div>
+
+    <button id="submit-company" class="submitBtn">Submit</button>
+</div>

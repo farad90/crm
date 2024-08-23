@@ -1,0 +1,387 @@
+:root {
+  --blue: #2b7ab5;
+  --white: #ffffff;
+  --redError: #ff9100;
+  --yellow: #9dff00;
+
+  --f-greenDrak: #28675b;
+  --f-green: #4fc4b7;
+  --f-blueDark: #202425;
+  --f-blue: #8ccce3;
+  --f-blueLight: #b9e4f3;
+  --f-blueBg: #e0f1fa;
+  --f-grayOverlay: rgba(27, 30, 29, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+#main {
+  height: 100%;
+  position: absolute;
+  padding-left: calc(0.25rem + 41px);
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+#overlay {
+  position: fixed;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 103;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s;
+  background-color: var(--f-grayOverlay);
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+#main-content {
+  position: absolute;
+  left: 50px;
+  bottom: 0;
+  display: flex;
+  height: 100%;
+}
+
+#sidebar-menu {
+  position: absolute;
+  background-color: var(--f-greenDrak);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 110;
+}
+
+.sidebar-menu-tab-item {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  height: 80px;
+  margin-left: 11px;
+  width: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.sidebar-menu-tab-item.active{
+  background-color: white;
+  color: var(--f-greenDrak);
+}
+
+.sidebar-menu-tab-item:hover{
+  cursor: pointer;
+}
+
+#sidebar-menu ul {
+  width: 100%;
+}
+
+#farad-logo {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  font-size: 40px;
+  color: white;
+}
+
+#sidebar-footer {
+  position: absolute;
+  margin: 1rem 0;
+  bottom: 0;
+}
+
+#sidebar-footer li {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+/* Scrollbar style*/
+
+::-webkit-scrollbar-track {
+  border-radius: 30px;
+  background-color: #efeff5;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background-color: #42576d;
+}
+
+/*****************************/
+
+div.login-card {
+  background-color: var(--blue);
+  border-radius: 1rem;
+  color: var(--white);
+  padding: 3rem;
+}
+
+div.logo {
+  font-size: 3rem;
+  text-align: center;
+}
+
+div#question p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+p.error {
+  color: var(--redError);
+  padding: -1 !important;
+  margin: -1 !important;
+}
+
+div#login-error {
+  color: var(--redError);
+  margin-top: 1px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  bottom: 0;
+  background-color: var(--blue);
+  color: white;
+  font-size: 14px;
+  padding: 0 10px;
+  z-index: 115;
+}
+
+.footer .user {
+  display: flex;
+  align-items: center;
+}
+
+.footer .user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  margin: 5px;
+  overflow: hidden;
+}
+
+.footer .user-image img {
+  width: 100%;
+  height: 100%;
+}
+
+#sidebar-footer .other:hover {
+  cursor: pointer;
+}
+
+/*********** panel CSS *************/
+#panel-div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg1.webp") no-repeat center center;
+  background-size: cover; /* Ensures the image covers the entire sidebar */
+  opacity: 0.1; /* Adjust the opacity as needed */
+  z-index: 199;
+}
+
+#panel-div {
+  display: none;
+  padding: 0px;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  background-color: #e3e8f1;
+  width: 600px;
+  z-index: 110;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s !important;
+}
+
+#panel-content {
+  position: sticky;
+  z-index: 200;
+}
+
+#panel-div.active {
+  display: block;
+}
+
+#panel-menu {
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.panel-item {
+  height: 80px;
+  width: 100%;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+#panel-menu li {
+  font-size: 15px;
+}
+
+#panel-menu li span {
+  font-size: 25px;
+  margin: 10px;
+}
+
+.panel-item:hover {
+  cursor: pointer;
+}
+
+.panel-item i {
+  font-size: 25px;
+}
+
+.panel-item span {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* panel main styles */
+
+.panel-main {
+  background: #f7f7f7;
+  border-radius: 10px;
+  height: 100px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* panel footer styles */
+
+.panel-footer {
+  position: fixed;
+  width: 580px;
+  bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-footer .farad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.social-media-icons i {
+  margin-right: 20px;
+  color: #6d767e;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.social-media-icons i:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.panel-page {
+  display: none;
+}
+
+#panel-main-page {
+  padding: 10px;
+}
+
+#panel-companies {
+  flex-direction: column;
+}
+
+#panel-companies .header {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+#panel-companies .main {
+  display: flex;
+}
+
+.panel-active {
+  display: block;
+}
+
+.back-icon {
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.back-icon:hover {
+  cursor: pointer;
+}
+
+.panel-page-name {
+  font-size: 20px;
+}
+
+.action-menu-active {
+  display: block;
+}

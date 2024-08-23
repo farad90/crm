@@ -1,0 +1,117 @@
+<%- include('./Header.ejs') %>
+
+    <title>Sign Up</title>
+
+
+    <div class="container">
+        <section class="vh-100 gradient-custom">
+            <div class="container py-3 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-80">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="login-card">
+
+                            
+                            <div class=" mt-md-3 pb-2">
+
+
+                                <div class="m-2 text-center">
+
+                                    <h2 class="display-4">Sign Up</h2>
+
+
+                                </div>
+
+                                <form id="login-form" action="/signup" method="POST">
+                                    <div class="form-group form-white mt-4 mb-2">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" name="email" class="form-control" id="email"
+                                            placeholder="E-mail">
+                                    </div>
+
+                                    <div class="form-group form-white mb-2">
+                                        <label for="username">Username</label>
+                                        <input type="text" name="username" class="form-control" id="username"
+                                            placeholder="Username">
+                                    </div>
+
+                                    <div class="form-group form-white mb-2">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="password" class="form-control" id="inputPassword4"
+                                            placeholder="Password">
+                                    </div>
+
+                                    <div class="form-group form-white mb-2">
+                                        <label for="confirm">Confirm Password</label>
+                                        <input type="password" name="confirmPassword" class="form-control"
+                                            id="confirmPassword" placeholder="Confirm Password">
+                                    </div>
+
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-outline-light  w-100" type="submit">Sign Up</button>
+                                    </div>
+                                    <div class="justify-content-center text-center my-2">
+                                        <span class="text-white-50 small  ">
+                                            or continue with
+                                        </span>
+                                    </div>
+
+                                    <div class="justify-content-center text-center">
+                                        <button class="gsi-material-button">
+                                            <div class="gsi-material-button-state"></div>
+                                            <div class="gsi-material-button-content-wrapper">
+                                                <div class="gsi-material-button-icon">
+                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 48 48" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                        style="display: block;">
+                                                        <path fill="#EA4335"
+                                                            d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z">
+                                                        </path>
+                                                        <path fill="#4285F4"
+                                                            d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z">
+                                                        </path>
+                                                        <path fill="#FBBC05"
+                                                            d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z">
+                                                        </path>
+                                                        <path fill="#34A853"
+                                                            d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z">
+                                                        </path>
+                                                        <path fill="none" d="M0 0h48v48H0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="gsi-material-button-contents">Sign Up with
+                                                    Google</span>
+                                                <span style="display: none;">Sign Up with Google</span>
+                                            </div>
+                                        </button>
+                                    </div>
+
+
+                                    <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                                        <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                        <a href="#!" class="text-white"><i
+                                                class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                                        <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div>
+                                <p class="mb-0">Do you already have an account? <a href="/login"
+                                        class="text-white-50 fw-bold">Login</a>
+                                </p>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <%- include('./Footer.ejs') %>

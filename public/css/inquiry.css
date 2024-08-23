@@ -1,0 +1,286 @@
+:root {
+  --backgroundblue :#2B7AB5;
+  --GrayBackground: #f1f1f1;
+  --whiteBackground: #ffffff;
+  --blueDark: #1c4e80;
+  --blueLight: #a5d8dd;
+  --purple: #5867e8;
+  --orange: #ff5d2d;
+  --greenLight: #3ba755;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #dee1e3;
+}
+
+button{
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  margin: auto;
+  height: 720px;
+  justify-content: center;
+}
+
+
+
+.inq-tabs{
+  display: flex;
+}
+
+.inq-tab{
+  width: 100px;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px 5px;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+}
+.inq-tab:hover{
+  cursor: pointer;
+}
+
+.inq-tab.selected{
+  background-color: var(--GrayBackground);
+  border: 1px solid gray;
+  border-bottom: 0;
+}
+
+.content-div {
+  background-color: var(--GrayBackground);
+  width: 800px;
+  height: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+}
+
+.inq-header {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid var(--blueDark);
+  border-radius: 5px;
+}
+
+
+
+.company-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid var(--whiteBackground);
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+.company-logo > img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.inq-container{
+  padding: 10px;
+  border: 1px solid gray;
+  height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+div.input {
+  margin: 5px 0;
+}
+
+input[type="text"] {
+  padding: 2px 5px;
+}
+
+.inq-header-1,
+.inq-header-2 {
+  width: 330px;
+  text-align: center;
+}
+
+span.input-label {
+  display: inline-block;
+  width: 115px;
+  text-align: right;
+  font-size: 14px;
+  color: var(--blueDark);
+}
+
+input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.dropZone{
+  height: 10px;
+}
+
+.input select{
+  width: 191px;
+  padding: 2px 5px;
+  border: none;
+  outline: none;
+}
+
+.dropZone.dragOver {
+  background-color: red;
+}
+
+.dragging {
+  background-color: var(--blueLight);
+}
+
+div.item {
+  margin: 0;
+  border: 1px solid var(--blueDark);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.item-header {
+  background-color: var(--blueDark);
+  color: var(--whiteBackground);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--blueDark);
+}
+
+.item-header:hover {
+  cursor: pointer;
+}
+
+.item-header-icons {
+  margin-right: 10px;
+  color: var(--whiteBackground);
+  font-size: 15px;
+}
+
+.item-header-icons span {
+  margin-left: 5px;
+}
+
+.fa-bars {
+  cursor: move;
+}
+
+.item-main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-attachments {
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-top: auto;
+  float: right;
+  width: 210px;
+  height: 100px;
+  margin: auto;
+  padding: 5px;
+  border: 1px dashed #a6a6a6;
+}
+
+.item-attachments:hover{
+  cursor: pointer;
+}
+
+.itemAttachmentHighlight{
+  background-color: var(--backgroundblue);
+}
+
+.item-file{
+  display: flex;
+}
+
+
+.item-file-name{
+  white-space: nowrap; /* Prevent text from wrapping to multiple lines */
+  overflow:hidden;
+  text-overflow: ellipsis; /* Add ellipsis (...) when text overflows */
+  margin:0 5px;
+  font-size: 12px;
+}
+
+
+.item-content {
+  display: flex;
+}
+
+.item-content-left {
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-description {
+  background-color: var(--whiteBackground);
+  margin: 10px 0 ;
+  width: 315px;
+}
+
+.item-description textarea {
+  border: none;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  outline: none;
+  padding: 5px;
+}
+
+.inquiry-buttons button{
+  height: 25px;
+  outline: none;
+  border-radius: 5px;
+
+
+}
+
+
+button.importByXlsx , .xlsxTemplate{
+  width: 150px;
+  border: 1px solid var(--blueLight);
+  background-color: var(--backgroundblue);
+  color: white;
+
+}
+
+button.add-item {
+  width: 100px;
+  border: 1px solid var(--blueLight);
+  background-color: var(--blueLight);
+}
+
+button.submit-inquiry {
+  width: 100px;
+  border-radius: 5px;
+  border: 1px solid var(--greenLight);
+  background-color: var(--greenLight);
+  outline: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .content-div {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .inq-header {
+    display: block;
+  }
+}

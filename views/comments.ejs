@@ -1,0 +1,37 @@
+<%- include('./Header.ejs') %>
+
+
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/comments.css">
+
+
+
+    <div class="comments-container1">
+        <div class="comment-main-level1">
+            <div class="comment-avatar1">
+                <img src="<%=user.profilePic %>" alt="">
+            </div>
+
+            <div class="new-comment-content">
+                <textarea class="new-comment-textarea" placeholder="Write a new comment ..."></textarea>
+                <div onclick="submitCmnt()" class="submitCmntBtn"> <i class="fa-solid fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <ul class="comments-list1">
+
+            <!-- Comments will be added here by javascript comments.js -->
+
+        </ul>
+
+
+
+    </div>
+
+
+
+    <script type="text/javascript" src="/js/comments.js"></script>
+
+    <%- include('./Footer.ejs') %>

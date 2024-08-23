@@ -1,0 +1,303 @@
+:root {
+  --backgroundblue: #2b7ab5;
+}
+
+.main {
+  display: flex;
+  margin: auto;
+  height: 675px;
+}
+
+/*********** Companies Style *********/
+
+.companies-container {
+  width: 300px;
+}
+
+#companies,
+#people {
+  width: 100%;
+  height: 680px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+hr {
+  margin: 3px;
+}
+
+.findCompany input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.findPerson input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.company,
+.person {
+  background-color: white;
+  margin-bottom: 5px;
+}
+
+.company-header,
+.person-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--backgroundblue);
+  color: white;
+  padding: 5px;
+  font-size: 13px;
+}
+
+.company-header:hover {
+  cursor: pointer;
+}
+
+.companyTitle,
+.personTitle {
+  display: flex;
+  align-items: center;
+}
+
+.companyTitle .company-logo,
+.personProfilePic {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.personProfilePic img {
+  width: 100%;
+  height: 100%;
+}
+
+.companyIcons i {
+  margin: 0 5px;
+}
+
+
+.personIcons i {
+  margin: 0 5px;
+}
+
+.company-main,
+.person-main {
+  display: none;
+  padding: 5px;
+  font-size: 13px;
+}
+
+.company-main i {
+  color: var(--backgroundblue);
+  margin-right: 5px;
+}
+
+.person-main i {
+  color: var(--backgroundblue);
+  margin-right: 5px;
+}
+
+.company-webmail {
+  display: flex;
+  justify-content: space-between;
+}
+
+/********* new Company styles ****/
+
+.new-company-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 100%;
+}
+
+#new-company {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.inputs input {
+  border: none;
+  outline: none;
+  margin: 2px;
+  width: 100%;
+}
+
+.tab select {
+  outline: none;
+  width: 100%;
+  margin: 5px 0;
+  padding: 3px;
+}
+
+textarea {
+  font-size: 16px;
+  padding: 3px 5px;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+}
+
+.tab {
+  display: flex;
+}
+
+.side {
+  width: 30px;
+  display: flex;
+  font-size: 16px;
+  background-color: var(--backgroundblue);
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#uploadImage {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid white;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+#uploadImage img {
+  height: 100%;
+  width: 100%;
+}
+
+.profilePictureBtn {
+  position: absolute;
+  display: none;
+  outline: none;
+  border: none;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: transparent;
+}
+
+#uploadImage:hover .profilePictureBtn {
+  display: block;
+  outline: none;
+}
+
+.errors {
+  width: 100%;
+  float: left;
+  margin: 5px 0;
+  padding: 5px;
+  font-size: 12px;
+  color: red;
+}
+
+.submitBtn {
+  width: 150px;
+  background-color: var(--backgroundblue);
+  color: white;
+  outline: none;
+  border: none;
+  padding: 5px 0;
+}
+
+/******** upload picture Modal styles **********/
+
+input[type="file"] {
+  display: none;
+}
+
+.imageCropper {
+  width: 200px;
+}
+
+.imageCropperButtons {
+  display: none;
+  margin-top: 5px;
+}
+
+.imageCropperButtons button {
+  border: none;
+  outline: none;
+  width: 80px;
+  font-size: 14px;
+  color: white;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.uploadImage {
+  background-color: var(--backgroundblue);
+}
+
+.resetImage {
+  background-color: #262a2b;
+}
+
+img {
+  display: block;
+
+  /* This rule is very important, please don't ignore this */
+  max-width: 100%;
+}
+
+
+
+.companyIcons:hover ul {
+  display: block;
+}
+
+.action-menu {
+  color: var(--backgroundblue);
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 0;
+  list-style-type: none;
+}
+
+.action-menu li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.action-menu li:hover {
+  background-color: #f0f0f0;
+}

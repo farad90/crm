@@ -1,0 +1,83 @@
+<%- include('./Header.ejs') %>
+<script type="text/javascript" src="/js/read-excel-file.min.js"></script>
+<script type="text/javascript" src="/js/attach.js"></script>
+
+
+
+    <div class="content-div">
+        <div class="inq-header">
+            <div class="company-logo">
+                <img id="inquiry-logo-img" src="/images/ESC-logo.jpg" alt="">
+            </div>
+            <div class="inq-header-1">
+                <div class="input">
+                    <span class="input-label">Company name</span>
+                    <select name="company" id="companies-select">
+                        <option selected disabled>Select</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <span class="input-label">Contact Person</span>
+                    <select name="contactPerson" id="contact-person-select">
+                        <option selected disabled>Select</option>
+                    </select>
+                    </div>
+                <div class="input">
+                    <span class="input-label">Inquiry Title</span>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="inq-header-2">
+                <div class="input">
+                    <span class="input-label">Inquiry No.</span>
+                    <input type="text">
+                </div>
+                <div class="input">
+                    <span class="input-label">Start date</span>
+                    <input type="text">
+                </div>
+                <div class="input">
+                    <span class="input-label">Close date</span>
+                    <input type="text">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="inq-tabs">
+            <div class="inq-tab selected">Inquiry</div>
+            <div class="inq-tab">Offer</div>
+            <div class="inq-tab">Order</div>
+            <div class="inq-tab">Discussions</div>
+        </div>
+
+        <div class="inq-container">
+            <div class="inquiry-buttons">
+                <a href=""><span class="icon-importExcel"></span></a>
+                <button class="xlsxTemplate">Excel Template</button>
+                <button class="add-item">+Add item</button>
+                <button class="submit-inquiry">Submit</button>
+                <input type="file" id="excelInput" />
+
+            </div>
+
+            <div class="items-summary">
+            </div>
+
+            <div class="items">
+                <div class="dropZone" id="droptarget"> </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <script type="text/javascript" src="/js/inquiry.js"></script>
+
+    <%- include('./Footer.ejs') %>

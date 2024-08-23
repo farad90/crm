@@ -1,0 +1,75 @@
+<div class="new-company-container">
+    <form id="personForm">
+
+        <div class="tab">
+            <div class="side">
+                <i class="fa-regular fa-image"></i>
+            </div>
+            <div class="inputs">
+                <div id="uploadImage">
+                    <img id="imagePreview" src="/images/profilePic.png" alt="">
+                    <button type="button" class="profilePictureBtn">
+                        <i class="fas fa-camera"></i>
+                    </button>
+
+                </div>
+
+                <div class="imageCropper">
+                    <img id="imageCropper">
+                </div>
+
+                <input type="file" name="companyLogo" id="imageInput">
+
+                <div class="imageCropperButtons">
+
+                    <button class="uploadImage" id="confirmImage">Upload</i></button>
+                    <button class="resetImage" id="cancelImage">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="tab">
+            <div class="side">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="inputs">
+                <input type="text" name="firstname_EN" placeholder="Firstname">
+                <input type="text" name="lastname_EN" placeholder="Lastname">
+            </div>
+        </div>
+        <hr>
+        <div class="tab">
+            <div class="side">
+                <i class="fa-regular fa-building"></i>
+            </div>
+            <div class="inputs">
+
+                <select name="workingAt" id="workingAt"> </select>
+                <select name="position" id="personPositions"> </select>
+                <!-- sales, manager, procurement,financial, commercial... -->
+
+            </div>
+        </div>
+        <hr>
+        <div class="tab">
+            <div class="side">
+                <i class="fa-regular fa-address-book"></i>
+            </div>
+            <div class="inputs">
+                <input type="text" name="phone" placeholder="Phone">
+                <input type="text" name="cellPhone" placeholder="Cellphone">
+                <input type="text" name="email" placeholder="Email">
+                <hr>
+                <textarea name="address_EN" placeholder="Address"></textarea>
+            </div>
+        </div>
+
+    </form>
+
+    <div class="errors" id="submitPersonErrors"></div>
+
+    <button id="submit-person" class="submitBtn">Submit</button>
+</div>

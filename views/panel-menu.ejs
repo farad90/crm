@@ -1,0 +1,37 @@
+<div id="main-layout-overlay" class="overlay"></div>
+
+
+<div id="panel-div">
+
+    <div id="panel-content">
+
+        <div id="panel-main-page" class="panel-page panel-active">
+            <%- include('./panelMainPage.ejs') %>
+        </div>
+
+        <div id="panel-companies" class="panel-page">
+            <div class="header">
+                <span class="back-icon"><i class="fa-solid fa-less-than"></i></span>
+                <span class="panel-page-name">Companies</span>
+            </div>
+            <div class="main">
+                <%- include('./newCompany.ejs') %>
+                    <%- include('./companies.ejs') %>
+            </div>
+        </div>
+
+        <div id="panel-persons" class="panel-page">
+            <div class="header">
+                <span class="back-icon"><i class="fa-solid fa-less-than"></i></span>
+                <span class="panel-page-name">Persons</span>
+            </div>
+
+            <div class="main">
+                <%- include('./newPerson.ejs') %>
+                    <%- include('./persons.ejs') %>
+            </div>
+        </div>
+
+    </div>
+
+</div>

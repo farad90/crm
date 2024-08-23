@@ -1,0 +1,67 @@
+<!---------------- HEAEDER ---------------------->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">FARAD</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/chat">Chat </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="/signup">SignUp</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contacts">Contacts </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/companies">Companies </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/inquiry">New Inquiry </a>
+            </li>
+        </ul>
+
+
+        <% if (check) { %>
+
+            <span>welcome <%= user.username %></span>
+
+            <a href="/comments" class="btn btn-outline-primary ml-2">comments</a>
+
+            <a href="/logout" class="btn btn-outline-danger ml-2">LogOut</a>
+
+            <% }else{ %>
+
+                <a href="/signup" class="btn btn-outline-primary ml-2">SignUp</a>
+
+                <a href="/login" class="btn btn-outline-success ml-2">Login</a>
+                <% } %>
+
+    </div>
+
+
+</nav>
+
+
+
+<!-------------- FOOTER ----------------->
+
+<div class="footer">
+    <div class="other">
+        <i class="fa-solid fa-grip"></i>
+    </div>
+    <div class="user">
+        username
+        <div class="user-image">
+            <img src="/images/profilePic.png" alt="">
+        </div>
+    </div>
+</div>
